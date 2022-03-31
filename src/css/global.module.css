@@ -78,11 +78,11 @@
   }
   
   :global(.show-on-mobile) {
-    display: none;
+    display: none !important;
   }
   
   :global(.hide-on-mobile) {
-    display: block;
+    display: block !important;
   }
   
   :global(.circle ul li::before) {
@@ -96,11 +96,11 @@
   
   @media only screen and (min-device-width: 320px) and (max-device-width: 560px) {
     :global(.show-on-mobile) {
-      display: block;
+      display: block !important;
     }
   
     :global(.hide-on-mobile) {
-      display: none;
+      display: none !important;
     }
   }
   

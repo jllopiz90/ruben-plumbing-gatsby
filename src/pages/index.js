@@ -1,12 +1,10 @@
 import * as React from "react";
-import { graphql } from "gatsby";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 import { useIntersectionObserver } from "../scroll-animations/watchElementsIntoView.ts";
 import "../css/global.module.css";
 import Header from "../components/Header/Header";
-import image from "../images/plumbing1.jpeg";
 
 // styles
 const pageStyles = {
