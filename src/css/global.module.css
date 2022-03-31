@@ -1,0 +1,106 @@
+:root {
+    --main-bg-color: rgb(1, 13, 41);
+    --main-text-color: #fff;
+    --button-bright: 120%;
+    --sky-color: #61dafb;
+    --shadow-color: #fff;
+    --hide-opacity: 1;
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--main-bg-color);
+  }
+  
+  main {
+    padding: 0;
+  }
+  
+  p,
+  li,
+  a {
+    color: var(--main-text-color);
+  }
+
+  a {
+      text-decoration: none;    
+  }
+  
+  :global(.button) {
+    width: 50px;
+    height: 40px;
+    /* padding: 5px 10px; */
+    border: 1px solid #61dafb;
+    background-color: transparent;
+  }
+  
+  :global(.textShadow3D:hover) {
+    transition: all 1s ease-in-out;
+  }
+  
+  :global(.textShadow3D:hover) {
+    text-shadow: 0px 0px var(--sky-color), 1px 1px var(--main-bg-color), 2px 2px var(--main-text-color);
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  
+  :global(.boxShadow3D) {
+    transition: all 1s ease-in-out;
+  }
+  
+  :global(.boxShadow3D:hover) {
+    box-shadow: 1px 1px var(--sky-color), 2px 2px var(--main-text-color);
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+    /* transition: all 1s ease-in-out; */
+  }
+  
+  :global(.grow) {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  :global(.grow:hover) {
+    transform: scale(1.1);
+    filter: brightness(var(--button-bright));
+  }
+  
+  :global(.three-columns-grid) {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 1rem;
+  }
+  
+  :global(.show-on-mobile) {
+    display: none;
+  }
+  
+  :global(.hide-on-mobile) {
+    display: block;
+  }
+  
+  :global(.circle ul li::before) {
+    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--sky-color); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+  
+  @media only screen and (min-device-width: 320px) and (max-device-width: 560px) {
+    :global(.show-on-mobile) {
+      display: block;
+    }
+  
+    :global(.hide-on-mobile) {
+      display: none;
+    }
+  }
+  
